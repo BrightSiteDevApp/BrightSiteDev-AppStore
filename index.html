@@ -18,6 +18,18 @@
             padding: 10px 20px;
             text-align: center;
         }
+        .search-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+        #searchInput {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -70,121 +82,102 @@
     <header>
         <h1>BrightSite Dev Apps</h1>
     </header>
-    <div class="container">
 
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for an app..." onkeyup="searchApps()">
+    </div>
+
+    <div class="container" id="appContainer">
         <div class="app-card">
-            <img src="img/admin.jpg" alt="App 1">
+            <img src="img/admin.jpg" alt="Admin Dashboard">
             <h3>ADMIN DASHBOARD</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3427197-bv9rxm.apk?v=2" target="_blank">Download</a>
         </div>
-
-
         <div class="app-card">
-            <img src="img/lgihtspeeddata.jpg" alt="App 2">
+            <img src="img/lgihtspeeddata.jpg" alt="LightSpeed Data">
             <h3>LightSpeed Data</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3421766-hkgd75.apk?v=2d" target="_blank">Download</a>
         </div>
         <div class="app-card">
-            <img src="img/JAMELZTLCMS.jpg" alt="App 3">
+            <img src="img/JAMELZTLCMS.jpg" alt="JAMELZ TLCMS">
             <h3>JAMELZ TLCMS</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3423240-tz9id3.apk?v=2" target="_blank">Download</a>
         </div>
-        
         <div class="app-card">
-            <img src="img/vinco data.jpg" alt="App 4">
+            <img src="img/vinco data.jpg" alt="VINCO DATA">
             <h3>VINCO DATA</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3424078-dreh62.apk?v=1" target="_blank">Download</a>
         </div>
-        
         <div class="app-card">
-            <img src="img/JOSEPH TELECOM.jpg" alt="App 5">
+            <img src="img/JOSEPH TELECOM.jpg" alt="JOSEPH TELECOM">
             <h3>JOSEPH TELECOM</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3189575-7iy32f.apk?v=6" target="_blank">Download</a>
-        
         </div>
         <div class="app-card">
-            <img src="img/la ritz telecom.jpg" alt="App 6">
+            <img src="img/la ritz telecom.jpg" alt="La Ritz Telecom">
             <h3>La Ritz Telecom</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3427188-yq7sn3.apk?v=2" target="_blank">Download</a>
         </div>
-
-        
         <div class="app-card">
-            <img src="img/riwaconcept.jpg" alt="App 7">
+            <img src="img/riwaconcept.jpg" alt="RIWA CONCEPT">
             <h3>RIWA CONCEPT</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3428457-1vxpcu.apk?v=2" target="_blank">Download</a>
         </div>
-
-
         <div class="app-card">
-            <img src="img/nana telecom.jpg" alt="App 8">
+            <img src="img/nana telecom.jpg" alt="NANA'S TELECOM">
             <h3>NANA'S TELECOM</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3429008-lu9rc3.apk?v=2" target="_blank">Download</a>
         </div>
-
-
         <div class="app-card">
-            <img src="img/mkglobal.jpg" alt="App 9">
+            <img src="img/mkglobal.jpg" alt="MK GLOBAL">
             <h3>MK GLOBAL</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3429804-cyvgeh.apk?v=2" target="_blank">Download</a>
         </div>
-
-
         <div class="app-card">
-            <img src="img/benmantelecom.jpg" alt="App 10">
+            <img src="img/benmantelecom.jpg" alt="BENMAN TELECOM">
             <h3>BENMAN TELECOM</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3433394-oqje6u.apk?v=2" target="_blank">Download</a>
         </div>
-
-
-       
-
         <div class="app-card">
-            <img src="img/hotspot digital solutions.jpg" alt="App 11">
+            <img src="img/hotspot digital solutions.jpg" alt="Hotspot Digital Solutions">
             <h3>Hotspot (VTU & Bill payment)</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3465786-0synuw.apk?v=2" target="_blank">Download</a>
         </div>
-
-
-
-          
-
         <div class="app-card">
-            <img src="img/masters telecom.jpg" alt="App 12">
+            <img src="img/masters telecom.jpg" alt="Masters Telecom">
             <h3>Masters Telecom</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3484108-kte8f6.apk?v=1" target="_blank">Download</a>
         </div>
-
-        
         <div class="app-card">
-            <img src="img/blitz.jpg" alt="App 12">
+            <img src="img/blitz.jpg" alt="BLITZ">
             <h3>BLITZ</h3>
             <p>Category: VTU</p>
             <a href="https://apk.e-droid.net/apk/app3492706-rdlqvn.apk?v=2" target="_blank">Download</a>
         </div>
-
-        <!-- OTHER APPS.... 
-
-         <div class="app-card">
-            <img src="https://via.placeholder.com/200x150" alt="App 13">
-            <h3>App Four</h3>
-            <p>Category: Entertainment</p>
-            <a href="https://example.com/app-four-download" target="_blank">Download</a>
-        </div>
-
-        </div> -->
     </div>
+
+    <script>
+        function searchApps() {
+            let input = document.getElementById("searchInput").value.toLowerCase();
+            let appCards = document.querySelectorAll(".app-card");
+
+            appCards.forEach(card => {
+                let appName = card.querySelector("h3").innerText.toLowerCase();
+                card.style.display = appName.includes(input) ? "block" : "none";
+            });
+        }
+    </script>
 </body>
 </html>
