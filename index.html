@@ -1,207 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrightSite Dev</title>
-    <link rel="icon" type="image/x-icon" href="img/admin.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brightsitedev</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.ico" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        .search-container {
-            text-align: center;
-            margin: 15px 0;
-        }
-        #searchInput {
-            width: 80%;
-            max-width: 400px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-        .app-card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-        .app-card:hover {
-            transform: scale(1.05);
-        }
-        .app-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .app-card h3 {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-        .app-card p {
-            margin: 0 10px 10px;
-            font-size: 14px;
-            color: #777;
-        }
-        .app-card a {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .app-card a:hover {
-            background-color: #45a049;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+      }
+      .search-container {
+        text-align: center;
+        margin: 15px 0;
+      }
+      #searchInput {
+        width: 80%;
+        max-width: 400px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+      }
+      .app-card {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .app-card:hover {
+        transform: scale(1.05);
+      }
+      .app-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+      .app-card h3 {
+        margin: 10px 0;
+        font-size: 18px;
+        color: #333;
+      }
+      .app-card p {
+        margin: 0 10px 10px;
+        font-size: 14px;
+        color: #777;
+      }
+      .app-card a {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      .app-card a:hover {
+        background-color: #45a049;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>BrightSite Dev Apps</h1>
+      <h1>Brightsitedev Apps</h1>
     </header>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search for an app..." onkeyup="searchApps()">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search for an app..."
+        onkeyup="searchApps()"
+      />
     </div>
 
     <div class="container" id="appContainer">
-        <div class="app-card">
-            <img src="img/admin.jpg" alt="Admin Dashboard">
-            <h3>ADMIN DASHBOARD</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3427197-bv9rxm.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/lgihtspeeddata.jpg" alt="LightSpeed Data">
-            <h3>LightSpeed Data</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3421766-hkgd75.apk?v=2d" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/JAMELZTLCMS.jpg" alt="JAMELZ TLCMS">
-            <h3>JAMELZ TLCMS</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3423240-tz9id3.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/vinco data.jpg" alt="VINCO DATA">
-            <h3>VINCO DATA</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3424078-dreh62.apk?v=1" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/JOSEPH TELECOM.jpg" alt="JOSEPH TELECOM">
-            <h3>JOSEPH TELECOM</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3189575-7iy32f.apk?v=6" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/la ritz telecom.jpg" alt="La Ritz Telecom">
-            <h3>La Ritz Telecom</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3427188-yq7sn3.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/riwaconcept.jpg" alt="RIWA CONCEPT">
-            <h3>RIWA CONCEPT</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3428457-1vxpcu.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/nana telecom.jpg" alt="NANA'S TELECOM">
-            <h3>NANA'S TELECOM</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3429008-lu9rc3.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/mkglobal.jpg" alt="MK GLOBAL">
-            <h3>MK GLOBAL</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3429804-cyvgeh.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/benmantelecom.jpg" alt="BENMAN TELECOM">
-            <h3>BENMAN TELECOM</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3433394-oqje6u.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/hotspot digital solutions.jpg" alt="Hotspot Digital Solutions">
-            <h3>Hotspot (VTU & Bill payment)</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3465786-0synuw.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/abdul plug.jpg" alt="ADBUL PLUG">
-            <h3>MY ADBUL PLUG (MAP)</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3497054-8lxno1.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/masters telecom.jpg" alt="Masters Telecom">
-            <h3>Masters Telecom</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3484108-kte8f6.apk?v=1" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/blitz.jpg" alt="BLITZ">
-            <h3>BLITZ</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3492706-rdlqvn.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/mahn telecom.jpg" alt="MAHN_TELECOMS">
-            <h3>Mahn Telecoms</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3502768-dg81fs.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/SKYLINK TELECOM.jpg" alt="SKYLINK TELECOM">
-            <h3>SKY LINK TELECOM</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3504234-0mz2q5.apk?v=2" target="_blank">Download</a>
-        </div>
-        <div class="app-card">
-            <img src="img/hb data pro.jpg" alt="HB DATA PRO">
-            <h3>HB Data Professional</h3>
-            <p>Category: VTU</p>
-            <a href="https://apk.e-droid.net/apk/app3524075-wb8dna.apk?v=2" target="_blank">Download</a>
-        </div>
+      <div class="app-card">
+        <img src="img/admin.jpg" alt="Admin Dashboard" />
+        <h3>ADMIN DASHBOARD</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3427197-bv9rxm.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/lgihtspeeddata.jpg" alt="LightSpeed Data" />
+        <h3>LightSpeed Data</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3421766-hkgd75.apk?v=2d"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/JAMELZTLCMS.jpg" alt="JAMELZ TLCMS" />
+        <h3>JAMELZ TLCMS</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3423240-tz9id3.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/vinco data.jpg" alt="VINCO DATA" />
+        <h3>VINCO DATA</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3424078-dreh62.apk?v=1"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/JOSEPH TELECOM.jpg" alt="JOSEPH TELECOM" />
+        <h3>JOSEPH TELECOM</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3189575-7iy32f.apk?v=6"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/la ritz telecom.jpg" alt="La Ritz Telecom" />
+        <h3>La Ritz Telecom</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3427188-yq7sn3.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/riwaconcept.jpg" alt="RIWA CONCEPT" />
+        <h3>RIWA CONCEPT</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3428457-1vxpcu.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/nana telecom.jpg" alt="NANA'S TELECOM" />
+        <h3>NANA'S TELECOM</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3429008-lu9rc3.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/mkglobal.jpg" alt="MK GLOBAL" />
+        <h3>MK GLOBAL</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3429804-cyvgeh.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/benmantelecom.jpg" alt="BENMAN TELECOM" />
+        <h3>BENMAN TELECOM</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3433394-oqje6u.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img
+          src="img/hotspot digital solutions.jpg"
+          alt="Hotspot Digital Solutions"
+        />
+        <h3>Hotspot (VTU & Bill payment)</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3465786-0synuw.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/abdul plug.jpg" alt="ADBUL PLUG" />
+        <h3>MY ADBUL PLUG (MAP)</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3497054-8lxno1.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/masters telecom.jpg" alt="Masters Telecom" />
+        <h3>Masters Telecom</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3484108-kte8f6.apk?v=1"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/blitz.jpg" alt="BLITZ" />
+        <h3>BLITZ</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3492706-rdlqvn.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/mahn telecom.jpg" alt="MAHN_TELECOMS" />
+        <h3>Mahn Telecoms</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3502768-dg81fs.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/SKYLINK TELECOM.jpg" alt="SKYLINK TELECOM" />
+        <h3>SKY LINK TELECOM</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3504234-0mz2q5.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+      <div class="app-card">
+        <img src="img/hb data pro.jpg" alt="HB DATA PRO" />
+        <h3>HB Data Professional</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3524075-wb8dna.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
+
+      <div class="app-card">
+        <img src="img/Big-bamzy.jpg" alt="Big-Bamzy" />
+        <h3>Big Bamzy</h3>
+        <p>Category: VTU</p>
+        <a
+          href="https://apk.e-droid.net/apk/app3492706-rdlqvn.apk?v=2"
+          target="_blank"
+          >Download</a
+        >
+      </div>
     </div>
 
     <script>
-        function searchApps() {
-            let input = document.getElementById("searchInput").value.toLowerCase();
-            let appCards = document.querySelectorAll(".app-card");
+      function searchApps() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let appCards = document.querySelectorAll(".app-card");
 
-            appCards.forEach(card => {
-                let appName = card.querySelector("h3").innerText.toLowerCase();
-                card.style.display = appName.includes(input) ? "block" : "none";
-            });
-        }
+        appCards.forEach((card) => {
+          let appName = card.querySelector("h3").innerText.toLowerCase();
+          card.style.display = appName.includes(input) ? "block" : "none";
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
